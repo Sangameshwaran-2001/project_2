@@ -1,0 +1,88 @@
+:root {
+    --primary: #6366f1;   /* Indigo */
+    --bg: #0b0e14;        /* Deep Black */
+    --card-bg: #161b22;   /* Greyish Blue */
+    --text: #ffffff;
+    --text-dim: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10%;
+}
+
+.logo { font-weight: 600; font-size: 1.5rem; letter-spacing: 1px; }
+.logo span { color: var(--primary); }
+
+nav ul { display: flex; list-style: none; gap: 2rem; }
+nav a { text-decoration: none; color: var(--text-dim); transition: 0.3s; }
+nav a:hover { color: var(--primary); }
+
+.btn-nav {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.hero h1 span { color: var(--primary); }
+.hero p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 2rem; }
+
+.hero-btns { display: flex; justify-content: center; gap: 1rem; }
+
+button {
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary { background: var(--primary); color: white; }
+.primary:hover { opacity: 0.8; transform: translateY(-2px); }
+
+.secondary { background: transparent; border: 1px solid var(--text-dim); color: white; }
+.secondary:hover { background: white; color: black; }
+
+/* Features Section - Flexbox practice */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 50px 10%;
+    flex-wrap: wrap; /* Makes it look good on mobile */
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 250px;
+    border: 1px solid #30363d;
+}
+
+.card h3 { color: var(--primary); margin-bottom: 0.5rem; }
